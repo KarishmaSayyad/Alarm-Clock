@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+
+body, .container, .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    padding: 0 10px;
+    min-height: 100vh;
+    background: rgba(149, 12, 159, 0.86);
+}
+
+.container{
+    width: 400px;
+    padding: 30px 30px 38px;
+    background: rgb(13, 1, 26);
+    border-radius: 10%;
+    flex-direction: column;
+    border: 2px solid  rgba(219, 195, 220, 0.86);
+    box-shadow: 0 10px 55px rgba(3, 9, 184, 0.86); 
+}
+.container #clockImg{
+    max-width: 103px;
+}
+
+.container h1{
+    font-size: 38px;
+    font-weight:bolder;
+    margin: 30px 0;
+    color: aliceblue;
+}
+.column{
+    padding-left: 10px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+.container .content{
+    width: 100;
+    justify-content: space-between;
+    
+}
+
+.content .disable{
+    cursor: no-drop;
+}
+
+.content .column{
+    padding: 0 10px;
+    border-radius: 5px;
+    /* border: 1px solid rgb(40, 205, 227); */
+    width: calc(100% /3 -5px);
+}
+
+.content .disable .column{
+    opacity: 0.6;
+    pointer-events: none;
+    outline: none;
+    border: none;
+}
+.btn_container{
+    width: auto;
+}
+.btn_container :hover{
+    color: red;
+    font-size: larger;
+}
+.btn{
+    height: auto;
+    width: auto;
+    padding: 11px 22px;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: bold;
+    font-weight:bolder;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: rgb(92, 2, 86);
+    /* background-color: rgb(16, 1, 3); */
+    /* align-items:center; */
+    justify-content: space-between;
+}
+.column .alarm_time{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: aqua;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 17px 2px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;    
+}
+.select{
+    padding: 10%;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.alarmList {
+    height: auto;
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(156, 47, 161);
+    border-radius: 4px;
+    color: white;
+    padding: 7px 0;    
+}
+.alarmList span{
+    margin: auto 0;
+    padding: 0px 10px;
+
+}
+.alarmList i{
+    margin: auto 7px;
+    
+}
+.deleteDiv{
+    display: flex;
+    justify-content:space-between;
+}
+/*activate clock image class*/
+.activate{
+	 width: 800px;
+	height: 110px; 
+	animation-name: clockanimation;
+	animation-duration: 0.4s;
+	animation-timing-function:ease-in-out;
+	animation-iteration-count: infinite;
+	/* animation-delay: 5s; */
+	position: first;
+}
+
+/*animation code on clock Image*/
+@keyframes clockanimation {
+	0% {
+		transform: rotate(20deg);
+	}
+	20% {
+		transform: rotate(-20deg);
+	}
+	40% {
+		transform: rotate(20deg);
+	}
+    60% {
+		transform: rotate(-20deg);
+	}
+    80% {
+		transform: rotate(20deg);
+	}
+    100% {
+		transform: rotate(-20deg);
+	}    
+}
+
+.alarmList-container{
+    margin-top: 25px;
+    color: aliceblue;
+    font-size:medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration-line: overline;
+}
+.deleteDiv{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-bottom: 200px;
+    margin-left: 200px;
+}
